@@ -1,4 +1,6 @@
-import { HomepageRoute, HOMEPAGE_URL } from './pages/homepage'
+import * as React from 'react'
+import { NavBar } from 'src/components/NavBar'
+import { HomepageRoute, HOMEPAGE_URL } from 'src/pages/homepage'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -9,17 +11,20 @@ import { h } from 'react-hyperscript-helpers'
 
 function App() {
   return (
-    h(Router, [
-      h('div', [
-        h('ul', [
-          h(Link, {to: HOMEPAGE_URL}, ['Homepage'])
-        ]),
-        h(Switch, [
-          h(HomepageRoute)
+    h(React.Fragment, [
+      h(NavBar, []),
+      h(Router, [
+        h('div', [
+          h('ul', [
+            h(Link, {to: HOMEPAGE_URL}, ['Homepage']),
+          ]),
+          h(Switch, [
+            h(HomepageRoute)
+          ])
         ])
       ])
     ])
-  );
+  )
 }
 
 export default App;
