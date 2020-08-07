@@ -1,16 +1,14 @@
-import {Route} from 'react-router-dom'
 import { h } from 'react-hyperscript-helpers'
+import { Route } from 'react-router-dom'
+
 
 export const BLOG_URL = '/blog'
 
-export function Blog() {
-  return (h('div', [
-    h('div', ['hello world']),
-    h('div', ['hello planet'])
-  ]))
+export const Blog = () => {
+  return h('div', ['hello world'])
 }
 
 
-export function BlogRoute(blogProps) {
-  return (h(Route, {path: BLOG_URL}, [h(Blog, blogProps)]))
+export const BlogRoute = blogProps => {
+  return h(Route, { exact: true, path: BLOG_URL }, [h(Blog, blogProps)])
 }

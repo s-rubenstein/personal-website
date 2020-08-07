@@ -75,7 +75,7 @@ export const ButtonLink = ({ children, disabled, to, style, containerStyle, hove
       alignItems: 'center',
       ...containerStyle
     },
-    hoverStyle
+    hoverStyle,
   },
   [h(Link, {
     ...props,
