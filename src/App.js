@@ -1,27 +1,30 @@
+import './App.css'
+
 import * as React from 'react'
-import { NavBar } from 'src/components/NavBar'
-import { BlogRoute } from 'src/pages/blog'
-import { HomepageRoute, HOMEPAGE_URL } from 'src/pages/homepage'
-import './App.css';
+import { div, h } from 'react-hyperscript-helpers'
 import {
   BrowserRouter as Router,
-  Switch,
-  Link
+  Switch
 } from 'react-router-dom'
-import { h } from 'react-hyperscript-helpers'
+import { NavBar } from 'src/components/NavBar'
+import { BlogRoute } from 'src/pages/blog'
+import { HomepageRoute } from 'src/pages/homepage'
+
 
 function App() {
   return (
     h(Router, [
       h(NavBar, []),
-      h('div', [
+      div([
         h(Switch, [
-          h(HomepageRoute),
-          h(BlogRoute)
+          h(React.Fragment, [
+            h(HomepageRoute),
+            h(BlogRoute)
+          ])
         ])
       ])
     ])
   )
 }
 
-export default App;
+export default App
