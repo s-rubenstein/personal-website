@@ -8,7 +8,7 @@ import { styles as generalStyles } from 'src/utils/styles'
 export const HOMEPAGE_URL = '/'
 
 export const Homepage = () => {
-  return (div({ style: {...generalStyles.pageContainer, maxWidth: '50rem'} }, [
+  return (div({ style: { ...generalStyles.pageContainer, maxWidth: '50rem' } }, [
     h1(['Homepage']),
     div([`Hello and welcome to ${personalInfo.name}'s personal website! Here you can find all sorts of things 
       from my blog, my resume, and various sorts of things for hobbies of mine. This is also designed as
@@ -17,18 +17,18 @@ export const Homepage = () => {
     h2(['Software Engineering']),
     div(['My software engineering philosophy has been influenced by many amazing mentors, and has basically landed on the following ideas: ',
       ul([
-        li([`A software engineer's role is to minimize complexity.`]),
-        li(['The closer documentation is to code, the more it can be trusted.']),
+        li([`A software engineer's role is to minimize complexity`]),
+        li(['The closer documentation is to code, the more it can be trusted']),
         li(['Documentation is best used to capture snapshots in time. For example, "On 11/3/20, we decided to use library X for the following reasons..."']),
         li(['Technical debt is an inevitability of software engineering, therefore', ul([
           li(['it must be planned for']),
           li(['it must be continually reduced']),
           li(['it should be considered a form of complexity, which means it is part of a software engineer\'s job to deal with it'])
         ])]),
-        li(['Code is most easily approached (for me) and most valuable when it is rooted in a user issue.']),
-        li(['Software engineers are a class of user for the software they build. This includes new developers. Therefore issues for the engineers and for ramp up are user issues'])
-      ])
-    ]),
+        li(['Code is most easily approached (for me) and most valuable when it is rooted in a user issue']),
+        li(['Software engineers are a class of user for the software they build. This includes new developers. Therefore issues for the engineers and for ramp up are user issues']),
+        li(['Any work necessary for the product to ship should be either considered promotable work for a software engineer, or have a dedicated role for the work'])
+      ])]),
     div(['For anyone interested in looking at the code for this website, it can be found ',
       a({ style: { color: colors.secondary }, href: 'https://github.com/s-rubenstein/personal-website' }, ['here'])]),
     h2(['About Me']),

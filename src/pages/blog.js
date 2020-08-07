@@ -1,8 +1,10 @@
 import * as _ from 'lodash/fp'
 import * as React from 'react'
 import { div, h, h1 } from 'react-hyperscript-helpers'
-import { Route } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import { Table } from 'src/components/Table'
+import { DEI_PROFESSION_TITLE, DEI_PROFESSION_URL } from 'src/pages/blog/diversity-profession'
+import { colors } from 'src/utils/colors'
 import { styles as generalStyles } from 'src/utils/styles'
 
 
@@ -34,15 +36,15 @@ export const Blog = () => {
   const blogPosts = React.useMemo(
     () => [
       {
-        title: 'Non-Binary in a Binary Profession',
-        tags: tagsWithFormat(['Gender', 'Software Engineering']),
+        title: h(Link, {to: DEI_PROFESSION_URL, style: {color: colors.secondary}}, [DEI_PROFESSION_TITLE]),
+        tags: tagsWithFormat(['Diversity']),
         postDate: 'Thu Aug 06 2020',
         lastUpdated: 'Thu Aug 06 2020'
       }
     ], []
   )
   return div({ style: { ...generalStyles.pageContainer } }, [
-    h1(['WIP: Real blog posts to come']),
+    h1(['Blog Posts']),
     h(Table, { columns, data: blogPosts })
   ])
 }

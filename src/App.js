@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 import { NavBar } from 'src/components/NavBar'
 import { BlogRoute } from 'src/pages/blog'
+import { blogRoutes } from 'src/pages/blog/routes'
 import { HomepageRoute } from 'src/pages/homepage'
 
 
@@ -19,7 +20,8 @@ function App() {
         h(Switch, [
           h(React.Fragment, [
             h(HomepageRoute),
-            h(BlogRoute)
+            h(BlogRoute),
+            ...blogRoutes
           ])
         ])
       ])
