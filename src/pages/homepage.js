@@ -36,7 +36,7 @@ export const Homepage = () => {
      and transgender activist and software engineer. I primarily work on full stack web development projects, although currently
      I do much more front end software engineering. In my free time, I play a lot of board games, video games, participate in Live Action
      Role Playing events, play tabletop roleplaying games, and cook. I also tend to attend protests, and spent about half a year phone banking
-     for trans rights. Using software engineering to try to move the world towards a more equitable place is my passion.`])
+     for trans rights. My passion is using software engineering to try to move the world towards a more equitable place.`])
   ]))
 }
 
